@@ -2,7 +2,7 @@
 
 lean.table() {
 	p.fetch_github_release 'leanprover/lean4' \
-		| p.run_jq 'github-release' \
+		| p.run_filter 'github-release.jq' \
 			--arg global_variant 'Lean' \
 			--arg global_regex "^lean-(?<version>.+)-(?<os>.+?)(?:_(?<arch>.+?))?\\." \
 			--arg global_default_arch 'x86_64'

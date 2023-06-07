@@ -1,7 +1,7 @@
 # shellcheck shell=bash
 
 kubectl.table() {
-	p.run_bash 'kubectl'
+	p.run_filter 'kubectl.sh'
 }
 
 kubectl.install() {

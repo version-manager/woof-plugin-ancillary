@@ -2,7 +2,7 @@
 
 gh.table() {
 	p.fetch_github_release 'cli/cli' \
-		| p.run_jq 'github-release' \
+		| p.run_filter 'github-release.jq' \
 			--arg global_variant 'gh' \
 			--arg global_regex "^gh_(?<version>.+?)_(?<os>.+?)_(?<arch>.+?)\\."
 }

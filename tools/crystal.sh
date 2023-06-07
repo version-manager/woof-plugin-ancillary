@@ -2,7 +2,7 @@
 
 crystal.table() {
 	p.fetch_github_release 'crystal-lang/crystal' \
-		| p.run_jq 'github-release' \
+		| p.run_filter 'github-release.jq' \
 			--arg global_variant "Crystal" \
 			--arg global_regex "^crystal[_-](.+?)-1[_-](?:(?<os>.+?)-)?(?<arch>.+?)\\."
 }

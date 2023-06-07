@@ -2,7 +2,7 @@
 
 v.table() {
 	p.fetch_github_release 'vlang/v' \
-		| p.run_jq 'github-release' \
+		| p.run_filter 'github-release.jq' \
 			--arg global_variant 'V' \
 			--arg global_regex "^v_(?<os>.+?)(?:_(?<arch>arm64))?\\." \
 			--arg global_default_arch 'x86_64'

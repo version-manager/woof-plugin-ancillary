@@ -1,7 +1,7 @@
 # shellcheck shell=bash
 
 nim.table() {
-	p.run_bash 'nim'
+	p.run_filter 'nim.sh'
 }
 
 nim.install() {

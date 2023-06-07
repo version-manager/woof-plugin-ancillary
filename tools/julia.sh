@@ -2,7 +2,7 @@
 
 julia.table() {
 	p.fetch 'https://julialang-s3.julialang.org/bin/versions.json' \
-		| p.run_jq 'julia'
+		| p.run_filter 'julia.jq'
 }
 
 julia.install() {

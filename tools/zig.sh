@@ -2,7 +2,7 @@
 
 zig.table() {
 	p.fetch 'https://ziglang.org/download/index.json' \
-		| p.run_jq 'zig'
+		| p.run_filter 'zig.jq'
 }
 
 zig.install() {

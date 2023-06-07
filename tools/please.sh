@@ -2,7 +2,7 @@
 
 please.table() {
 	p.fetch_github_release 'thought-machine/please' \
-		| p.run_jq 'github-release' \
+		| p.run_filter 'github-release.jq' \
 			--arg global_variant 'Please' \
 			--arg global_regex "^please_(?:(?<type>servers|shim|tools)_)?(?<version>.+?)_(?<os>.+?)_(?<arch>.+?)\\."
 }

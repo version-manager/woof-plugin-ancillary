@@ -1,7 +1,7 @@
 # shellcheck shell=bash
 
 solidity.table() {
-	p.run_bash 'solidity'
+	p.run_filter 'solidity.sh'
 }
 
 solidity.install() {

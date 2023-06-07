@@ -2,7 +2,7 @@
 
 haxe.table() {
 	p.fetch_github_release 'HaxeFoundation/haxe' \
-		| p.run_jq 'github-release' \
+		| p.run_filter 'github-release.jq' \
 			--arg global_variant 'Haxe' \
 			--arg global_regex "^haxe-.+-(?<os>.+?)\\." \
 			--arg global_default_arch "x86_64"

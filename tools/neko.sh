@@ -2,7 +2,7 @@
 
 neko.table() {
 	p.fetch_github_release 'HaxeFoundation/neko' \
-		| p.run_jq 'github-release' \
+		| p.run_filter 'github-release.jq' \
 			--arg global_variant 'Neko' \
 			--arg global_regex "^neko-(?<version>.+?)-(?<os>.+?)(?<arch>(?:64)?)\\." \
 			--arg global_default_arch "x86"

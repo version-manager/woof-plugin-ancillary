@@ -2,7 +2,7 @@
 
 elm.table() {
 	p.fetch_github_release 'elm/compiler' \
-		| p.run_jq 'github-release' \
+		| p.run_filter 'github-release.jq' \
 			--arg global_variant 'Elm' \
 			--arg global_regex "bin(.+?)for-(?<os>.+?)[.-](?<arch>64-bit)?" \
 			--arg global_default_arch "x86"

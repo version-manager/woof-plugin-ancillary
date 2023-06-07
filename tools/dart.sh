@@ -1,7 +1,7 @@
 # shellcheck shell=bash
 
 dart.table() {
-	p.run_bash 'dart'
+	p.run_filter 'dart.sh'
 }
 
 dart.install() {

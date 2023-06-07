@@ -2,10 +2,10 @@
 
 helm.table() {
 	p.fetch_github_release 'helm/helm' \
-		| p.run_jq 'helm'
+		| p.run_filter 'helm.jq'
 	# TODO
 	# p.fetch_github_release 'helm/helm' \
-	# | p.run_jq 'github-release' \
+	# | p.run_filter 'github-release.jq' \
 	# 	--arg global_variant 'Helm' \
 	# 	--arg global_regex "^helm-(.*)-(?<os>.+)-(?<arch>.+?)\\."
 }

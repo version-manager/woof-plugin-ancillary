@@ -2,7 +2,7 @@
 
 gleam.table() {
 	p.fetch_github_release 'gleam-lang/gleam' \
-		| p.run_jq 'github-release' \
+		| p.run_filter 'github-release.jq' \
 			--arg global_variant 'Gleam' \
 			--arg global_regex "^gleam-(?<version>.+)-(?<os>linux|macos)(?:-(?<arch>.+?))?\\." \
 			--arg global_default_arch "x86_64" # FIXME possible bug? (universal?)

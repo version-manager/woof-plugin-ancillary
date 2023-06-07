@@ -2,7 +2,7 @@
 
 peco.table() {
 	p.fetch_github_release 'peco/peco' \
-		| p.run_jq 'github-release' \
+		| p.run_filter 'github-release.jq' \
 			--arg global_variant 'Peco' \
 			--arg global_regex "^peco_(?<os>.+)_(?<arch>.+?)\\."
 }

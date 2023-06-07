@@ -2,7 +2,7 @@
 
 ninja.table() {
 	p.fetch_github_release 'ninja-build/ninja' \
-		| p.run_jq 'github-release' \
+		| p.run_filter 'github-release.jq' \
 			--arg global_variant 'Ninja' \
 			--arg global_regex "^ninja-(?<os>.+?)\\." \
 			--arg global_default_arch 'x86_64'
