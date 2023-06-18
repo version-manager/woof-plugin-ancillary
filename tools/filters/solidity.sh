@@ -1,5 +1,4 @@
 # shellcheck shell=bash
-source "${0%/*}/util/util.sh"
 
 parse_solidity() {
 	local mirror='https://binaries.soliditylang.org'

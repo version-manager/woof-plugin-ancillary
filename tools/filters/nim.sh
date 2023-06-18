@@ -1,5 +1,4 @@
 # shellcheck shell=bash
-source "${0%/*}/util/util.sh"
 
 parse_nim() {
 	local nim_url='https://nim-lang.org/install.html'

@@ -1,5 +1,4 @@
 # shellcheck shell=bash
-source "${0%/*}/util/util.sh"
 
 parse_kubectl() {
 	local regex="refs/tags/kubernetes-(.*)"
